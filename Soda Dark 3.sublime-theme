@@ -172,14 +172,7 @@
     {
         "class": "tab_close_button",
         "settings": ["highlight_modified_tabs"],
-        "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-        "layer0.texture": "Theme - Soda/Soda Dark/tab-highlight-inactive.png"
-    },
-    {
-        "class": "tab_close_button",
-        "settings": ["highlight_modified_tabs"],
-        "parents": [{"class": "tab_control", "attributes": ["dirty", "selected"]}],
-        "layer0.texture": "Theme - Soda/Soda Dark/tab-highlight.png"
+        "parents": [{"class": "tab_control", "attributes": ["dirty", "selected"]}]
     },
     // Tab close button hover
     {
@@ -224,6 +217,22 @@
         "class": "tab_label",
         "attributes": ["transient"],
         "font.italic": true
+    },
+
+    // - Dirty active tab label
+    {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control", "attributes": ["selected", "dirty"]}],
+        "settings": ["highlight_modified_tabs"],
+        "fg": [255,156,0] // Marine blue [90,216,255]
+    },
+
+    // - Dirty inactive tab label
+    {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
+        "settings": ["highlight_modified_tabs"],
+        "fg": [255,156,0] // Marine blue [90,216,255]
     },
 
 //
